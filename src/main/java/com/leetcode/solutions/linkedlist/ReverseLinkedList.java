@@ -1,5 +1,8 @@
 package com.leetcode.solutions.linkedlist;
 
+/**
+ * Reverse a singly linked list.
+ */
 class ReverseLinkedList {
     public ListNode reverseList(ListNode head) {
         ListNode previousNode = null;
