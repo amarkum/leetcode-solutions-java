@@ -1,5 +1,8 @@
 package com.leetcode.solutions.linkedlist;
 
+/**
+ * Given a singly linked list, determine if it is a palindrome.
+ */
 class PalindromeLinkedList {
     public boolean isPalindrome(ListNode head) {
         ListNode fast = head;
