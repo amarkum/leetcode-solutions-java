@@ -43,13 +43,14 @@ class NTreePreOrderIterative {
 
         while (!stack.isEmpty()) {
 
-            // keep polling the last of the LinkedList
+            // Keep polling the last of the LinkedList
             Node node = stack.pollLast();
 
-            // Add the values to the end of the LinkedList
+            // Add the values to output LinkedList
             preOrderValues.add(node.val);
 
-            // Reverse the Children nodes
+            // Reverse the Children Nodes and add
+            // So when we do pollLast, last added will be picked up first
             Collections.reverse(node.children);
             for (Node child : node.children) {
                 stack.add(child);

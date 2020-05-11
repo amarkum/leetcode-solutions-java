@@ -45,7 +45,7 @@ class NTreePostOrderIterative {
             // Poll from end of the LinkedList
             Node node = stack.pollLast();
 
-            // Add values to the head of the LinkedList
+            // Add values to the head of the LinkedList so at last root value is end.
             postOrderValues.addFirst(node.val);
 
             // Add all node children to last of the LinkedList
