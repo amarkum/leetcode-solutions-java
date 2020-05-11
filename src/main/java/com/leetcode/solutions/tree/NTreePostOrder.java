@@ -37,17 +37,18 @@ class NTreePostOrderIterative {
             return postOrderValues;
         }
 
-        // Add root node to Stack
+        // Add root node to last of the LinkedList
         stack.add(root);
 
         while (!stack.isEmpty()) {
-            // keep polling the top of the LinkedList
+
+            // Poll from end of the LinkedList
             Node node = stack.pollLast();
 
-            // keep adding new node values at first
+            // Add values to the head of the LinkedList
             postOrderValues.addFirst(node.val);
 
-            // Add all node children in the stack
+            // Add all node children to last of the LinkedList
             for (Node child : node.children) {
                 stack.add(child);
             }

@@ -38,15 +38,15 @@ class NTreePreOrderIterative {
             return preOrderValues;
         }
 
+        // Add root to last of the LinkedList
         stack.add(root);
 
-        // Add root to last of the LinkedList
         while (!stack.isEmpty()) {
 
             // keep polling the last of the LinkedList
             Node node = stack.pollLast();
 
-            // Add the values to the end of the list
+            // Add the values to the end of the LinkedList
             preOrderValues.add(node.val);
 
             // Reverse the Children nodes
