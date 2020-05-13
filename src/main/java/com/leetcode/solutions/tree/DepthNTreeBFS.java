@@ -31,6 +31,7 @@ public class DepthNTreeBFS {
             for (int i = 0; i < size; i++) {
 
                 // Pop up all the node by the stack size, set previously
+                // Pop method removes the element from front of the LinkedList
                 Node node = stack.pop();
 
                 // add all the children at that level
