@@ -21,9 +21,13 @@ class SortedToBST {
             return null;
         }
 
+        // left + (right-left) / 2 is done to avoid IntegerOverflow errors
         int middlePoint = left + (right - left) / 2;
+
+        // Set the middle elements as node
         TreeNode node = new TreeNode(nums[middlePoint]);
 
+        // Set Left and right of the node, recursively
         node.left = constructTree(nums, left, middlePoint - 1);
         node.right = constructTree(nums, middlePoint + 1, right);
 
