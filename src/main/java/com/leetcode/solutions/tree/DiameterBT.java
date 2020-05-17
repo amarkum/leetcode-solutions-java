@@ -7,7 +7,7 @@ package com.leetcode.solutions.tree;
  * The diameter of a binary tree is the length of the longest path between any two nodes in a tree.
  * This path may or may not pass through the root.
  */
-class Solution {
+class DiameterBT {
     public int diameterOfBinaryTree(TreeNode root) {
         if (root == null)
             return 0;
