@@ -1,5 +1,12 @@
 package com.leetcode.solutions.strings;
 
+/**
+ * 1309. Decrypt String from Alphabet to Integer Mapping - https://leetcode.com/problems/decrypt-string-from-alphabet-to-integer-mapping/
+ *
+ * Given a string s formed by digits ('0' - '9') and '#' . We want to map s to English lowercase characters as follows:
+ * Characters ('a' to 'i') are represented by ('1' to '9') respectively.
+ * Characters ('j' to 'z') are represented by ('10#' to '26#') respectively.
+ */
 class DecryptString {
     public String freqAlphabets(String s) {
         StringBuilder output = new StringBuilder();
