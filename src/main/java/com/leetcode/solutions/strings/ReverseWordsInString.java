@@ -6,7 +6,7 @@ package com.leetcode.solutions.strings;
  * Given a string, you need to reverse the order of characters in each word within a sentence,
  * while still preserving whitespace and initial word order.
  */
-class Solution {
+class ReverseWordsInString {
     public String reverseWords(String s) {
         StringBuilder sb = new StringBuilder();
 
