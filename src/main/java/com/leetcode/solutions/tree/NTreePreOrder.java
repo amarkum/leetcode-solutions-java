@@ -13,18 +13,18 @@ import java.util.List;
  * each group of children is separated by the null value (See examples).
  */
 class NTreePreOrderRecursive {
-    List<Integer> postOrderValues = new ArrayList<Integer>();
+    List<Integer> preOrderValues = new ArrayList<Integer>();
 
     public List<Integer> preOrder(Node root) {
 
         if (root == null) {
-            return postOrderValues;
+            return preOrderValues;
         }
         for (Node node : root.children) {
             preOrder(node);
         }
-        postOrderValues.add(root.val);
-        return postOrderValues;
+        preOrderValues.add(root.val);
+        return preOrderValues;
     }
 }
 
