@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class AverageOfLevelsInBT {
     List<Double> averageList = new ArrayList<Double>();
-    LinkedList<TreeNode> stack = new LinkedList<TreeNode>();
+    LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
 
     public List<Double> averageOfLevels(TreeNode root) {
 
@@ -19,20 +19,20 @@ public class AverageOfLevelsInBT {
             return averageList;
         }
 
-        stack.offer(root);
+        queue.offer(root);
 
-        while (!stack.isEmpty()) {
-            int size = stack.size();
+        while (!queue.isEmpty()) {
+            int size = queue.size();
             Double sum = 0.0;
             for (int i = 0; i < size; i++) {
-                TreeNode node = stack.poll();
+                TreeNode node = queue.poll();
                 sum += node.val;
 
                 if (node.left != null) {
-                    stack.offer(node.left);
+                    queue.offer(node.left);
                 }
                 if (node.right != null) {
-                    stack.offer(node.right);
+                    queue.offer(node.right);
                 }
             }
             averageList.add(Double.valueOf(sum / (double) size));
