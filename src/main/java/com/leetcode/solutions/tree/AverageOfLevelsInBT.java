@@ -15,7 +15,7 @@ public class AverageOfLevelsInBT {
 
     public List<Double> averageOfLevels(TreeNode root) {
 
-        while (root == null) {
+        if (root == null) {
             return averageList;
         }
 
